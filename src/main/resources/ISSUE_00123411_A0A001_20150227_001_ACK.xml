@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="big5"?>
+<IssueAckRoot>
+	<SerialNum>
+	00001
+	</SerialNum>
+	<IssueAck>
+		<IssueStatus>Y</IssueStatus>
+		<FailReason></FailReason>		
+		<Result>	
+			<Identifier>00123411A0A001XYZ</Identifier>	
+			<Invoice>	
+				<InvoiceNumber>AB12345678</InvoiceNumber>
+				<CheckNumber>9527</CheckNumber>
+				<InvoiceDate>20150228</InvoiceDate>
+				<InvoiceTime>10:49:59</InvoiceTime>
+				<ExclusiveAmount>700</ExclusiveAmount>
+				<Tax>0</Tax>
+				<InclusiveAmount>700</InclusiveAmount>
+				<MainRemark>發票備註</MainRemark>
+				<InvoiceType>07</InvoiceType>
+				<InvoiceStatus>V</InvoiceStatus>
+			</Invoice>	
+			<Allowance>
+				<AllowanceNumber/>
+				<AllowanceDate/>
+				<ExclusiveAmount/>
+				<Tax/>
+				<InclusiveAmount/>
+				<AllowanceStatus/>
+			</Allowance>
+		</Result>
+	</IssueAck>
+</IssueAckRoot>

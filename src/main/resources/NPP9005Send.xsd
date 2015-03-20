@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="IssueRoot">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Issue" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="SerialNum">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="4"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="Enterprise">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="CompanyUN">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="8"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="OrgId">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="15"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="OrgUN">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="8"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Main">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Type">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="1"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="Identifier">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="100"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="TransactionNumber">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="50"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="TransactionDate">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="8"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="Total">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="10"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="InvoiceNumber">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="10"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Allowance">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="AllowanceNumber" type="xsd:string"/>
+										<xsd:element name="AllowanceDate" type="xsd:string"/>
+										<xsd:element name="AllowanceExclusiveAmount" type="xsd:string"/>
+										<xsd:element name="AllowanceTax" type="xsd:string"/>
+										<xsd:element name="AllowancePaperReturned" type="xsd:string"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="InvoiceMain">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="CheckNumber" type="xsd:string"/>
+										<xsd:element name="InvoiceDate" type="xsd:string"/>
+										<xsd:element name="InvoiceTime" type="xsd:string"/>
+										<xsd:element name="ExclusiveAmount" type="xsd:string"/>
+										<xsd:element name="Tax" type="xsd:string"/>
+										<xsd:element name="MainRemark" type="xsd:string"/>
+										<xsd:element name="InvoiceType" type="xsd:string"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="InvoiceInfo">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Paper">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="1"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="PaperPrinted">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="1"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="Donate">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="1"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="DonationUnit">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="7"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="CarrierType">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="6"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="CarrierId">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="64"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Buyer">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Name" type="xsd:string"/>
+										<xsd:element name="UnifiedNumber">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="50"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="Address">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="256"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Receiver">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Name" type="xsd:string"/>
+										<xsd:element name="Address">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="256"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="Phone">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="20"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Member">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="MemberId" type="xsd:string"/>
+										<xsd:element name="Email">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="128"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="Mobile">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="20"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Items">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Item">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="Serial">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="4"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="ProductCode">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="18"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="ProductName">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="128"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="Qty">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="1"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="Price">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="10"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="ItemTax">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="10"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="ItemExclude">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="10"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="ItemTotal">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="10"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="TaxType">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="1"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="Description">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="300"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="UserDefined1">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="300"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="UserDefined2">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="300"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="UserDefined3">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="300"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="UserDefined4">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:maxLength value="300"/>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="BI">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Attr1" type="xsd:string"/>
+										<xsd:element name="Attr2" type="xsd:string"/>
+										<xsd:element name="Attr3" type="xsd:string"/>
+										<xsd:element name="Attr4" type="xsd:string"/>
+										<xsd:element name="Attr5" type="xsd:string"/>
+										<xsd:element name="Attr6" type="xsd:string"/>
+										<xsd:element name="Attr7" type="xsd:string"/>
+										<xsd:element name="Attr8" type="xsd:string"/>
+										<xsd:element name="Attr9" type="xsd:string"/>
+										<xsd:element name="Attr10" type="xsd:string"/>
+										<xsd:element name="Attr11" type="xsd:string"/>
+										<xsd:element name="Attr12" type="xsd:string"/>
+										<xsd:element name="Attr13" type="xsd:string"/>
+										<xsd:element name="Attr14" type="xsd:string"/>
+										<xsd:element name="Attr15" type="xsd:string"/>
+										<xsd:element name="Attr16" type="xsd:string"/>
+										<xsd:element name="Attr17" type="xsd:string"/>
+										<xsd:element name="Attr18" type="xsd:string"/>
+										<xsd:element name="Attr19" type="xsd:string"/>
+										<xsd:element name="Attr20" type="xsd:string"/>
+										<xsd:element name="Attr21" type="xsd:string"/>
+										<xsd:element name="Attr22" type="xsd:string"/>
+										<xsd:element name="Attr23" type="xsd:string"/>
+										<xsd:element name="Attr24" type="xsd:string"/>
+										<xsd:element name="Attr25" type="xsd:string"/>
+										<xsd:element name="Attr26" type="xsd:string"/>
+										<xsd:element name="Attr27" type="xsd:string"/>
+										<xsd:element name="Attr28" type="xsd:string"/>
+										<xsd:element name="Attr29" type="xsd:string"/>
+										<xsd:element name="Attr30" type="xsd:string"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Other">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="UserDefined1" type="xsd:string"/>
+										<xsd:element name="UserDefined2" type="xsd:string"/>
+										<xsd:element name="UserDefined3" type="xsd:string"/>
+										<xsd:element name="UserDefined4" type="xsd:string"/>
+										<xsd:element name="UserDefined5" type="xsd:string"/>
+										<xsd:element name="UserDefined6" type="xsd:string"/>
+										<xsd:element name="UserDefined7" type="xsd:string"/>
+										<xsd:element name="UserDefined8" type="xsd:string"/>
+										<xsd:element name="UserDefined9" type="xsd:string"/>
+										<xsd:element name="UserDefined10" type="xsd:string"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
